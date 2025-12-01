@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:18-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - "./input:/var/lib/postgresql/18/input:ro"
+      - "./src:/var/lib/postgresql/18/src:ro"
